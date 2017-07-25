@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+/**
+ 使用路由跳转的控制器需要遵守JXBRouterProtocol协议
+ */
 @protocol JXBRouterProtocol <NSObject>
 
 + (instancetype)createViewController:(id)parameters;
