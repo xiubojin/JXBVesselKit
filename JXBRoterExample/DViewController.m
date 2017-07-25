@@ -13,8 +13,7 @@
 @end
 
 @implementation DViewController
-
-+ (instancetype)createDViewController:(id)parameters {
++ (instancetype)createViewController:(id)parameters {
     DViewController *dVC = [[DViewController alloc] init];
     return dVC;
 }

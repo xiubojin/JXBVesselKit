@@ -9,6 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+@protocol JXBRouterProtocol <NSObject>
+
++ (instancetype)createViewController:(id)parameters;
+
+@end
+
 typedef void(^HandlerBlock)(NSString *handlerTag, id results);
 
 @interface JXBRouter : NSObject

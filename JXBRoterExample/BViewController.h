@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JXBRouter.h"
 
-@interface BViewController : UIViewController
+@interface BViewController : UIViewController<JXBRouterProtocol>
 
 @end

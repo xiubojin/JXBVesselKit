@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JXBRouter.h"
 
-@interface CViewController : UIViewController
+@interface CViewController : UIViewController<JXBRouterProtocol>
 
 @end

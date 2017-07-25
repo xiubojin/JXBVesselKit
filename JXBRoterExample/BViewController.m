@@ -7,7 +7,6 @@
 //
 
 #import "BViewController.h"
-#import "JXBRouter.h"
 
 @interface BViewController ()
 @property(nonatomic,strong) UILabel *lbl;
@@ -15,7 +14,7 @@
 
 @implementation BViewController
 
-+ (instancetype)createBViewController:(id)parameters {
++ (instancetype)createViewController:(id)parameters {
     BViewController *bVC = [[BViewController alloc] init];
     return bVC;
 }

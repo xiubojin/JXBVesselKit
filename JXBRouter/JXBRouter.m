@@ -316,32 +316,13 @@ void swizzleMethod(Class class, SEL originalSelector, SEL swizzledSelector) {
     
     Class targetClass = NSClassFromString(targetControllerName);
     
-    NSString *selectorName = [NSString stringWithFormat:@"create%@:",targetControllerName];
-    
-    SEL selector = NSSelectorFromString(selectorName);
+    SEL selector = NSSelectorFromString(@"createViewController:");
     
     if ([targetClass respondsToSelector:selector]) {
         
-        NSMethodSignature *signature = [targetClass methodSignatureForSelector:selector];
+        UIViewController *targetController = [targetClass createViewController:targetQueryParams];
         
-        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
-        
-        [invocation setTarget:targetClass];
-        
-        [invocation setSelector:selector];
-        
-        [invocation setArgument:&targetQueryParams atIndex:2];
-        
-        [invocation invoke];
-        
-        UIViewController * __unsafe_unretained returnVC;
-        
-        [invocation getReturnValue:&returnVC];
-        
-        UIViewController *targetController = returnVC;
-        
-        if (returnVC) {
-            
+        if (targetController) {
             if (controllerHandler) {
                 HandlerBlock handlerBlock = [controllerHandler valueForKey:targetControllerName];
                 
@@ -358,7 +339,7 @@ void swizzleMethod(Class class, SEL originalSelector, SEL swizzledSelector) {
             NSLog(@"未找到相关类!");
         }
     }else{
-        NSString *errorInfo = [NSString stringWithFormat:@"模块定位错误，异常可能:Not Implementation %@'s %@ Method.",targetControllerName,selectorName];
+        NSString *errorInfo = [NSString stringWithFormat:@"请让目标控制器遵守JXBRouter的JXBRouterProtocol协议"];
         NSLog(@"%@",errorInfo);
     }
     

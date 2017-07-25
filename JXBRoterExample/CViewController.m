@@ -7,7 +7,6 @@
 //
 
 #import "CViewController.h"
-#import "JXBRouter.h"
 
 @interface CViewController ()
 
@@ -18,7 +17,7 @@
 
 @implementation CViewController
 
-+ (instancetype)createCViewController:(id)parameters {
++ (instancetype)createViewController:(id)parameters {
     CViewController *cVC = [[CViewController alloc] init];
     cVC.count = [[parameters valueForKey:@"count"] integerValue];
     cVC.str = [parameters valueForKey:@"str"];
