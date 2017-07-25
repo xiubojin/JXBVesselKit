@@ -97,9 +97,7 @@ void swizzleMethod(Class class, SEL originalSelector, SEL swizzledSelector) {
 
 + (void)registerRoutePattern:(NSString *)routePattern targetControllerName:(NSString *)targetControllerName handler:(void(^)(NSString *handlerTag, id parameters))handlerBlock {
     
-    if (!routePattern.length && !targetControllerName.length) {
-        return;
-    }
+    if (!routePattern.length && !targetControllerName.length) return;
     
     [[self sharedJXBRouter] addRoutePattern:routePattern targetControllerName:targetControllerName handler:handlerBlock];
 }
@@ -113,9 +111,7 @@ void swizzleMethod(Class class, SEL originalSelector, SEL swizzledSelector) {
 }
 
 + (BOOL)startRoute:(NSString *)routePattern {
-    if (!routePattern.length) {
-        return NO;
-    }
+    if (!routePattern.length) return NO;
     
     NSURL *URL = [[NSURL alloc] initWithString:routePattern];
     
@@ -123,9 +119,7 @@ void swizzleMethod(Class class, SEL originalSelector, SEL swizzledSelector) {
 }
 
 + (BOOL)startRouteWithURL:(NSURL *)URL {
-    if (!URL) {
-        return NO;
-    }
+    if (!URL) return NO;
     
     return [self analysisRoutePattern:URL];
 }
