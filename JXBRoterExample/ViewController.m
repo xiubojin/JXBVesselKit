@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "JXBRouter.h"
+#import "DViewController.h"
 
 @interface ViewController ()
 
@@ -29,9 +30,12 @@
     [JXBRouter registerRoutePattern:@"demo://Bmodule/mall/list" targetControllerName:@"DViewController" handler:^(NSString *handlerTag, id parameters) {
         NSLog(@"pushC button click");
     }];
-    [JXBRouter startRoute:@"demo://Bmodule/mall/list?type=3c"];
-//    NSURL *URL = [NSURL URLWithString:@"demo://Bmodule/mall/list?type=3c"];
-//    [[UIApplication sharedApplication] openURL:URL options:nil completionHandler:nil];
+    [JXBRouter startRoute:@"demo://Bmodule/mall/list"];
+}
+
+- (IBAction)testClick:(id)sender {
+    DViewController *dVC = [[DViewController alloc] init];
+    [self.navigationController pushViewController:dVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

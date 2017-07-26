@@ -19,8 +19,7 @@
 
 + (instancetype)createViewController:(id)parameters {
     CViewController *cVC = [[CViewController alloc] init];
-    cVC.count = [[parameters valueForKey:@"count"] integerValue];
-    cVC.str = [parameters valueForKey:@"str"];
+    cVC.title = [parameters valueForKey:@"title"];
     return cVC;
 }
 
@@ -29,19 +28,34 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(50, 100, 200, 100)];
-    [btn setTitle:@"popB并修改label字符串" forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-    btn.titleLabel.font = [UIFont systemFontOfSize:17.0];
-    [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn];
+    UIButton *btn1 = [[UIButton alloc] initWithFrame:CGRectMake(50, 100, 200, 50)];
+    [btn1 setTitle:@"验证事件1" forState:UIControlStateNormal];
+    [btn1 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [btn1 setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+    btn1.titleLabel.font = [UIFont systemFontOfSize:17.0];
+    [btn1 addTarget:self action:@selector(btnClick1) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn1];
+    
+    UIButton *btn2 = [[UIButton alloc] initWithFrame:CGRectMake(50, 150, 200, 50)];
+    [btn2 setTitle:@"验证事件2" forState:UIControlStateNormal];
+    [btn2 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [btn2 setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+    btn2.titleLabel.font = [UIFont systemFontOfSize:17.0];
+    [btn2 addTarget:self action:@selector(btnClick2) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn2];
 }
 
-- (void)btnClick {
+- (void)btnClick1 {
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
-    [param setValue:@"已经修改了" forKey:@"editStr"];
+    [param setValue:@"RouterDemo+editStr1" forKey:@"editStr1"];
+    [param setValue:@"测试跳转+editStr2" forKey:@"editStr2"];
+    [param setValue:@"123456789+editStr3" forKey:@"editStr3"];
     self.handlerBlock(@"update", param);
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)btnClick2 {
+    self.handlerBlock(nil, nil);
     [self.navigationController popViewControllerAnimated:YES];
 }
 

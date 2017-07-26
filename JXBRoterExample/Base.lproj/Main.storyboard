@@ -22,18 +22,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WsL-yZ-OBg">
-                                <rect key="frame" x="165" y="318.5" width="44" height="30"/>
+                                <rect key="frame" x="114" y="318.5" width="146" height="30"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                <state key="normal" title="PushB"/>
+                                <state key="normal" title="PushB控制器(带参数)"/>
                                 <connections>
                                     <action selector="pushBClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dCt-rN-hhS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwa-O1-KTx">
-                                <rect key="frame" x="164.5" y="391" width="45" height="30"/>
-                                <state key="normal" title="PushD"/>
+                                <rect key="frame" x="105.5" y="391" width="163" height="30"/>
+                                <state key="normal" title="PushD控制器(不带参数)"/>
                                 <connections>
                                     <action selector="pushCClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d79-IV-4pJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9r-2A-39e">
+                                <rect key="frame" x="141" y="466" width="92" height="30"/>
+                                <state key="normal" title="测试正常跳转"/>
+                                <connections>
+                                    <action selector="testClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aNQ-IY-yVZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -41,7 +48,9 @@
                         <constraints>
                             <constraint firstItem="Vwa-O1-KTx" firstAttribute="top" secondItem="WsL-yZ-OBg" secondAttribute="bottom" constant="42.5" id="4JY-yt-bXm"/>
                             <constraint firstItem="WsL-yZ-OBg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9cl-SZ-hfD"/>
+                            <constraint firstItem="O9r-2A-39e" firstAttribute="top" secondItem="Vwa-O1-KTx" secondAttribute="bottom" constant="45" id="BTA-eZ-7II"/>
                             <constraint firstItem="WsL-yZ-OBg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="G9s-aU-aHA"/>
+                            <constraint firstItem="O9r-2A-39e" firstAttribute="centerX" secondItem="Vwa-O1-KTx" secondAttribute="centerX" id="Rgj-HY-O2S"/>
                             <constraint firstItem="Vwa-O1-KTx" firstAttribute="centerX" secondItem="WsL-yZ-OBg" secondAttribute="centerX" id="UFM-CR-LSo"/>
                             <constraint firstItem="WsL-yZ-OBg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ypo-Kg-5hO"/>
                         </constraints>

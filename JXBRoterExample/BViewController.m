@@ -21,6 +21,7 @@
 
 + (instancetype)createViewController:(id)parameters {
     BViewController *bVC = [[BViewController alloc] init];
+    bVC.title = [parameters valueForKey:@"title"];
     bVC.info1 = [parameters valueForKey:@"info1"];
     bVC.info2 = [parameters valueForKey:@"info2"];
     bVC.info3 = [parameters valueForKey:@"info3"];
@@ -54,28 +55,49 @@
     self.lbl3 = lbl3;
     [self.view addSubview:lbl3];
     
-    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(50, 200, 200, 100)];
-    [btn setTitle:@"跳转到C控制器" forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
-    btn.titleLabel.font = [UIFont systemFontOfSize:17.0];
-    [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn];
+    UIButton *btn1 = [[UIButton alloc] initWithFrame:CGRectMake(50, 250, 300, 50)];
+    [btn1 setTitle:@"事件1-附带handler" forState:UIControlStateNormal];
+    [btn1 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [btn1 setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+    btn1.titleLabel.font = [UIFont systemFontOfSize:17.0];
+    [btn1 addTarget:self action:@selector(btnClick1) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn1];
+    
+    UIButton *btn2 = [[UIButton alloc] initWithFrame:CGRectMake(50, 300, 300, 50)];
+    [btn2 setTitle:@"事件2-覆盖handler" forState:UIControlStateNormal];
+    [btn2 setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [btn2 setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+    btn2.titleLabel.font = [UIFont systemFontOfSize:17.0];
+    [btn2 addTarget:self action:@selector(btnClick2) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn2];
 }
 
-- (void)btnClick {
+- (void)btnClick1 {
     [JXBRouter registerRoutePattern:@"demo://Amodule/product/list" targetControllerName:@"CViewController" handler:^(NSString *handlerTag, id parameters) {
         if ([handlerTag isEqualToString:@"update"]) {
-            self.lbl1.text = [parameters valueForKey:@"editStr"];
-            self.lbl2.text = [parameters valueForKey:@"editStr"];
-            self.lbl3.text = [parameters valueForKey:@"editStr"];
+            self.lbl1.text = [parameters valueForKey:@"editStr1"];
+            self.lbl2.text = [parameters valueForKey:@"editStr2"];
+            self.lbl3.text = [parameters valueForKey:@"editStr3"];
             self.lbl1.textColor = [UIColor redColor];
             self.lbl2.textColor = [UIColor redColor];
             self.lbl3.textColor = [UIColor redColor];
         }
     }];
     
-    [JXBRouter startRoute:@"demo://Amodule/product/list?type=1234"];
+    [JXBRouter startRoute:@"demo://Amodule/product/list?title=C控制器"];
+}
+
+- (void)btnClick2 {
+    [JXBRouter registerRoutePattern:@"demo://Amodule/product/list" targetControllerName:@"CViewController" handler:^(NSString *handlerTag, id parameters) {
+        self.lbl1.text = self.info1;
+        self.lbl2.text = self.info2;
+        self.lbl3.text = self.info3;
+        self.lbl1.textColor = [UIColor blackColor];
+        self.lbl2.textColor = [UIColor blackColor];
+        self.lbl3.textColor = [UIColor blackColor];
+    }];
+    
+    [JXBRouter startRoute:@"demo://Amodule/product/list?title=C控制器"];
 }
 
 - (void)didReceiveMemoryWarning {
