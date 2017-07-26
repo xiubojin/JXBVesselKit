@@ -22,7 +22,7 @@
 
 - (IBAction)pushBClick:(UIButton *)sender {
     [JXBRouter registerRoutePattern:@"demo://Amodule/mall/detail" targetControllerName:@"BViewController"];
-    [JXBRouter startRoute:@"demo://Amodule/mall/detail?id=1234"];
+    [JXBRouter startRoute:@"demo://Amodule/mall/detail?info1=RouterDemo&info2=测试跳转&info3=123456789"];
 }
 
 - (IBAction)pushCClick:(id)sender {
@@ -30,6 +30,8 @@
         NSLog(@"pushC button click");
     }];
     [JXBRouter startRoute:@"demo://Bmodule/mall/list?type=3c"];
+//    NSURL *URL = [NSURL URLWithString:@"demo://Bmodule/mall/list?type=3c"];
+//    [[UIApplication sharedApplication] openURL:URL options:nil completionHandler:nil];
 }
 
 - (void)didReceiveMemoryWarning {

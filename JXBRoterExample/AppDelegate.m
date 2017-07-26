@@ -53,5 +53,9 @@
     return [JXBRouter startRouteWithURL:url];
 }
 
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    return [JXBRouter startRouteWithURL:url];
+}
+
 
 @end

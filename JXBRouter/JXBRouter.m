@@ -111,11 +111,12 @@ void swizzleMethod(Class class, SEL originalSelector, SEL swizzledSelector) {
 }
 
 + (BOOL)startRoute:(NSString *)routePattern {
+    
     if (!routePattern.length) return NO;
     
-    NSURL *URL = [[NSURL alloc] initWithString:routePattern];
+    NSURL *URL = [NSURL URLWithString:[routePattern stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]]];
     
-    return [self analysisRoutePattern:URL];
+    return [self startRouteWithURL:URL];
 }
 
 + (BOOL)startRouteWithURL:(NSURL *)URL {
