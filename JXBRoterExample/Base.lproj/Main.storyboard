@@ -30,8 +30,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwa-O1-KTx">
-                                <rect key="frame" x="105.5" y="391" width="163" height="30"/>
-                                <state key="normal" title="PushD控制器(不带参数)"/>
+                                <rect key="frame" x="62" y="391" width="250" height="30"/>
+                                <state key="normal" title="PushD控制器(StoryBoard&amp;不带参数)"/>
                                 <connections>
                                     <action selector="pushCClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d79-IV-4pJ"/>
                                 </connections>

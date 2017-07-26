@@ -14,7 +14,7 @@
 
 @implementation DViewController
 + (instancetype)createViewController:(id)parameters {
-    DViewController *dVC = [[DViewController alloc] init];
+    DViewController *dVC = [[UIStoryboard storyboardWithName:@"DViewController" bundle:nil] instantiateViewControllerWithIdentifier:@"DController"];
     return dVC;
 }
 

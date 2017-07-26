@@ -17,6 +17,7 @@
 		2FCEF17E1F25DE7400470591 /* BViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FCEF17D1F25DE7400470591 /* BViewController.m */; };
 		2FCEF1811F25E77900470591 /* CViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FCEF1801F25E77900470591 /* CViewController.m */; };
 		2FCEF1841F25E77F00470591 /* DViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FCEF1831F25E77F00470591 /* DViewController.m */; };
+		2FCEF1891F2844F000470591 /* DViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FCEF1881F2844F000470591 /* DViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		2FCEF1801F25E77900470591 /* CViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CViewController.m; sourceTree = "<group>"; };
 		2FCEF1821F25E77F00470591 /* DViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DViewController.h; sourceTree = "<group>"; };
 		2FCEF1831F25E77F00470591 /* DViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DViewController.m; sourceTree = "<group>"; };
+		2FCEF1881F2844F000470591 /* DViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				2FCEF1821F25E77F00470591 /* DViewController.h */,
 				2FCEF1831F25E77F00470591 /* DViewController.m */,
 				2FCEF16A1F259AC200470591 /* Main.storyboard */,
+				2FCEF1881F2844F000470591 /* DViewController.storyboard */,
 				2FCEF16D1F259AC200470591 /* Assets.xcassets */,
 				2FCEF16F1F259AC200470591 /* LaunchScreen.storyboard */,
 				2FCEF1721F259AC200470591 /* Info.plist */,
@@ -166,6 +169,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FCEF1891F2844F000470591 /* DViewController.storyboard in Resources */,
 				2FCEF1711F259AC200470591 /* LaunchScreen.storyboard in Resources */,
 				2FCEF16E1F259AC200470591 /* Assets.xcassets in Resources */,
 				2FCEF16C1F259AC200470591 /* Main.storyboard in Resources */,
