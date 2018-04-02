@@ -22,7 +22,7 @@ typedef void(^HandlerBlock)(NSString *handlerTag, id results);
 
 @interface JXBRouter : NSObject
 
-@property(nonatomic,strong) UINavigationController *currentNavigationController;
+@property(nonatomic,weak) UINavigationController *currentNavigationController;
 
 + (instancetype)sharedJXBRouter;
 
