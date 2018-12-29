@@ -1,5 +1,14 @@
-# JXBRouter
-iOS路由，通过route-controller关联映射进行控制器跳转，支持Controller回调操作
+# JXBContainer
 
+`iOS`容器组件，组件大体分为两部分：
+（1）容器组件
+（2）路由组件
 
-使用方法，具体见http://www.jianshu.com/p/2212c4637055
+###（1）容器组件
+负责事件解耦，事件分为`application`生命周期事件和`user`生命周期事件。
+`application`生命周期事件包括但不限于app进入前台、进入后台、推送、`OpenURL`等等。
+`user`生命周期事件包括但不限于登录成功、登录失败、登出成功、登出失败、自动登录等等。
+这些事件由容器统一监听，事件发生后，将事件分发给注册到容器中的模块。
+
+### （2）路由组件
+负责模块间解耦，底层机制为`target-action`。
