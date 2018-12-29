@@ -1,6 +1,6 @@
 //
 //  JXBContainer.m
-//  MagicProject
+//  JXBContainer
 //
 //  Created by 金修博 on 2018/11/27.
 //  Copyright © 2018 金修博. All rights reserved.
@@ -13,14 +13,14 @@
 @implementation JXBContainer
 
 + (instancetype)shareInstance {
-    static JXBContainer *magic;
+    static JXBContainer *container;
     static dispatch_once_t onceToken;
     
     dispatch_once(&onceToken, ^{
-        magic = [[self alloc] init];
+        container = [[self alloc] init];
     });
     
-    return magic;
+    return container;
 }
 
 + (void)registerModule:(Class)moduleClass {

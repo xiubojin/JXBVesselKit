@@ -1,6 +1,6 @@
 //
 //  SettingModule.m
-//  MagicProject
+//  JXBContainer
 //
 //  Created by 金修博 on 2018/11/27.
 //  Copyright © 2018 金修博. All rights reserved.
@@ -15,7 +15,7 @@
 @end
 
 @implementation SettingModule
-magic_module_register
+container_module_register
 
 - (void)modDidEnterBackgroundEvent:(JXBContext *)context {
     NSLog(@"SettingModule - DidEnterBackgroundEvent");

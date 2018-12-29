@@ -1,6 +1,6 @@
 //
 //  LiveViewController.m
-//  MagicProject
+//  JXBContainer
 //
 //  Created by 金修博 on 2018/12/7.
 //  Copyright © 2018 金修博. All rights reserved.

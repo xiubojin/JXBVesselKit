@@ -1,6 +1,6 @@
 //
 //  ContactModule.m
-//  MagicProject
+//  JXBContainer
 //
 //  Created by 金修博 on 2018/11/27.
 //  Copyright © 2018 金修博. All rights reserved.
@@ -17,7 +17,7 @@
 
 @implementation ContactModule
 
-magic_module_register
+container_module_register
 
 - (JXBModulePriority)priority {
     return 4;

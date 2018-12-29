@@ -1,6 +1,6 @@
 //
 //  CRMModule.m
-//  MagicProject
+//  JXBContainer
 //
 //  Created by 金修博 on 2018/11/27.
 //  Copyright © 2018 金修博. All rights reserved.
@@ -14,7 +14,7 @@
 @end
 
 @implementation CRMModule
-magic_module_register_async(YES)
+container_module_register_async(YES)
 
 - (JXBModulePriority)priority {
     return 0;

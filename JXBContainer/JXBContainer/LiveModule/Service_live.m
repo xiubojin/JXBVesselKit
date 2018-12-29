@@ -1,6 +1,6 @@
 //
 //  Service_live.m
-//  MagicProject
+//  JXBContainer
 //
 //  Created by 金修博 on 2018/11/30.
 //  Copyright © 2018 金修博. All rights reserved.

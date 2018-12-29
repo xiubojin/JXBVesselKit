@@ -1,6 +1,6 @@
 //
 //  LoginModule.h
-//  MagicProject
+//  JXBContainer
 //
 //  Created by 金修博 on 2018/12/3.
 //  Copyright © 2018 金修博. All rights reserved.
