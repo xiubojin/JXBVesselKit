@@ -1,5 +1,9 @@
 # JXBContainer
 
+### 整体架构
+
+![image](https://github.com/xiubojin/JXBContainer/blob/master/resource/container1.png)
+
 `iOS`容器组件，组件大体分为两部分：
 （1）容器组件
 （2）路由组件
@@ -14,3 +18,9 @@
 ### 路由组件
 
 负责模块间解耦，底层机制为`target-action`。
+
+### 特性
+
+- 模块开发实现插件化
+- 管理模块声明周期，容器统一分发系统&用户事件
+- 业务层模块仅依赖容器组件或路由即可
