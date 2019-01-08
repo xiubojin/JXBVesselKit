@@ -27,10 +27,6 @@
 
 #pragma mark - Life Cycle
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [JXBContext shareInstance].application = application;
-    [JXBContext shareInstance].launchOptions = launchOptions;
-    [[JXBContainer shareInstance] setContext:[JXBContext shareInstance]];
-    
     [[JXBModuleManager shareInstance] triggerEvent:kModInstallEvent];
     [[JXBModuleManager shareInstance] triggerEvent:kModInitEvent];
     
