@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "TabbarController.h"
 #import "LoginManager.h"
+#import "JXBContainer/JXBContainer.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +20,9 @@
 @synthesize window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    NSLog(@"--->> application:didFinishLaunchingWithOptions:");
+    [JXBContext shareInstance].application = application;
+    [JXBContext shareInstance].launchOptions = launchOptions;
+    [[JXBContainer shareInstance] setContext:[JXBContext shareInstance]];
     
     [super application:application didFinishLaunchingWithOptions:launchOptions];
     
