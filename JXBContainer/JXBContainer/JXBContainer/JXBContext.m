@@ -29,6 +29,9 @@
     if (self = [super init]) {
         self.openUrlItem = [[JXBOpenUrlItem alloc] init];
         self.notificationItem = [[JXBNotificationItem alloc] init];
+        self.shortcutItem = [[JXBShortcutItem alloc] init];
+        self.userActivityItem = [[JXBUserActivityItem alloc] init];
+        self.watchItem = [[JXBWatchItem alloc] init];
     }
     return self;
 }
@@ -42,6 +45,9 @@
     context.customParam = self.customParam;
     context.openUrlItem = self.openUrlItem;
     context.notificationItem = self.notificationItem;
+    context.shortcutItem = self.shortcutItem;
+    context.userActivityItem = self.userActivityItem;
+    context.watchItem = self.watchItem;
     return context;
 }
 

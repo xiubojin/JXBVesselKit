@@ -13,13 +13,12 @@
 
 NSString * const kMod58PushMessageEvent = @"mod58PushMessageEvent:";
 
+@ContainerMod(HomeModule)
 @interface HomeModule ()<JXBModuleProtocol>
 
 @end
 
 @implementation HomeModule
-
-container_module_register
 
 - (JXBModulePriority)priority {
     return 4;

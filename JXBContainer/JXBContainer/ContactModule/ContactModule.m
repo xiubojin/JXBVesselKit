@@ -10,14 +10,13 @@
 #import "JXBRouter+Contact.h"
 #import "JXBContainerDefines.h"
 
+@ContainerMod(ContactModule)
 @interface ContactModule ()<JXBModuleProtocol>
 
 @end
 
 
 @implementation ContactModule
-
-container_module_register
 
 - (JXBModulePriority)priority {
     return 4;

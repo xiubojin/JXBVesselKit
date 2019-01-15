@@ -10,12 +10,12 @@
 #import "JXBRouter+IM.h"
 #import "JXBContainerDefines.h"
 
+@ContainerMod(IMModule)
 @interface IMModule ()<JXBModuleProtocol>
 
 @end
 
 @implementation IMModule
-container_module_register
 
 - (JXBModulePriority)priority {
     return 4;

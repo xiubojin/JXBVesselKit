@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F8550B521EDB5AE00F2A71B /* JXBAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8550B421EDB5AE00F2A71B /* JXBAnnotation.m */; };
 		2FE9551021D7632800B4637B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9550F21D7632800B4637B /* AppDelegate.m */; };
 		2FE9551321D7632800B4637B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FE9551221D7632800B4637B /* ViewController.m */; };
 		2FE9551621D7632800B4637B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FE9551421D7632800B4637B /* Main.storyboard */; };
@@ -62,6 +63,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F8550B321EDB5AE00F2A71B /* JXBAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JXBAnnotation.h; sourceTree = "<group>"; };
+		2F8550B421EDB5AE00F2A71B /* JXBAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JXBAnnotation.m; sourceTree = "<group>"; };
 		2FE9550B21D7632800B4637B /* JXBContainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JXBContainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FE9550E21D7632800B4637B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2FE9550F21D7632800B4637B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -103,7 +106,6 @@
 		2FE9555A21D7635A00B4637B /* JXBModuleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXBModuleManager.m; sourceTree = "<group>"; };
 		2FE9555C21D7635A00B4637B /* JXBRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXBRouter.h; sourceTree = "<group>"; };
 		2FE9555D21D7635A00B4637B /* JXBRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXBRouter.m; sourceTree = "<group>"; };
-		2FE9555E21D7635A00B4637B /* JXBAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXBAnnotation.h; sourceTree = "<group>"; };
 		2FE9555F21D7635A00B4637B /* JXBAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXBAppDelegate.h; sourceTree = "<group>"; };
 		2FE9556021D7635A00B4637B /* JXBContainerDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXBContainerDefines.h; sourceTree = "<group>"; };
 		2FE9556121D7635A00B4637B /* JXBContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXBContainer.m; sourceTree = "<group>"; };
@@ -267,18 +269,19 @@
 			isa = PBXGroup;
 			children = (
 				2FE9555B21D7635A00B4637B /* JXBRouter */,
+				2FE9555F21D7635A00B4637B /* JXBAppDelegate.h */,
+				2FE9555921D7635A00B4637B /* JXBAppDelegate.m */,
 				2FE9555421D7635A00B4637B /* JXBModuleManager.h */,
+				2FE9555A21D7635A00B4637B /* JXBModuleManager.m */,
+				2FE9556021D7635A00B4637B /* JXBContainerDefines.h */,
+				2FE9555821D7635A00B4637B /* JXBContainer.h */,
+				2FE9556121D7635A00B4637B /* JXBContainer.m */,
 				2FE9555521D7635A00B4637B /* JXBCommon.h */,
 				2FE9555621D7635A00B4637B /* JXBContext.h */,
-				2FE9555721D7635A00B4637B /* JXBModuleProtocol.h */,
-				2FE9555821D7635A00B4637B /* JXBContainer.h */,
-				2FE9555921D7635A00B4637B /* JXBAppDelegate.m */,
-				2FE9555A21D7635A00B4637B /* JXBModuleManager.m */,
-				2FE9555E21D7635A00B4637B /* JXBAnnotation.h */,
-				2FE9555F21D7635A00B4637B /* JXBAppDelegate.h */,
-				2FE9556021D7635A00B4637B /* JXBContainerDefines.h */,
-				2FE9556121D7635A00B4637B /* JXBContainer.m */,
 				2FE9556221D7635A00B4637B /* JXBContext.m */,
+				2FE9555721D7635A00B4637B /* JXBModuleProtocol.h */,
+				2F8550B321EDB5AE00F2A71B /* JXBAnnotation.h */,
+				2F8550B421EDB5AE00F2A71B /* JXBAnnotation.m */,
 			);
 			path = JXBContainer;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				2FE9559021D7635B00B4637B /* JXBContext.m in Sources */,
 				2FE9559B21D7635B00B4637B /* JXBRouter+CRM.m in Sources */,
 				2FE9558621D7635B00B4637B /* JXBRouter+Setting.m in Sources */,
+				2F8550B521EDB5AE00F2A71B /* JXBAnnotation.m in Sources */,
 				2FE9559221D7635B00B4637B /* IMViewController.m in Sources */,
 				2FE9559121D7635B00B4637B /* IMModule.m in Sources */,
 				2FE9559921D7635B00B4637B /* JXBRouter+Home.m in Sources */,

@@ -10,12 +10,12 @@
 #import "JXBRouter+Setting.h"
 #import "JXBContainerDefines.h"
 
+@ContainerMod(SettingModule)
 @interface SettingModule ()<JXBModuleProtocol>
 
 @end
 
 @implementation SettingModule
-container_module_register
 
 - (void)modDidEnterBackgroundEvent:(JXBContext *)context {
     NSLog(@"SettingModule - DidEnterBackgroundEvent");

@@ -9,6 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "JXBContext.h"
 
+#define container_module_register \
++ (void)load { [JXBContainer registerModule:[self class]]; } \
+- (BOOL)async { return YES; }
+
+//模块注册宏,isAsync=YES时效果同上面那个宏,模块的init事件会异步执行;isAsync=NO时,模块的init事件会同步执行.
+#define container_module_register_async(isAsync) \
++ (void)load { [JXBContainer registerModule:[self class]]; } \
+- (BOOL)async { return [[NSString stringWithUTF8String:#isAsync] boolValue]; }
+
 typedef NS_ENUM(NSUInteger, JXBModulePriority) {
     JXBModulePriorityDefault,
     JXBModulePriorityNormal,
